@@ -39,12 +39,3 @@ STARTUP.md
 Dockerfile
 docker-compose.yml
 ```
-
-## Documentación adicional
-
-- [STARTUP.md](./STARTUP.md)
-- [DEVELOPMENT.md](./DEVELOPMENT.md)
-
-## Licencia
-
-MIT
