@@ -3,7 +3,7 @@ import type { Transaction, CreateTransactionDto, UpdateTransactionDto } from '..
 import type { Category, CreateCategoryDto, UpdateCategoryDto } from '../types/category';
 import type { DashboardData } from '../types/dashboard';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 const apiClient: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,

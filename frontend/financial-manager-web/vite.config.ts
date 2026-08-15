@@ -12,5 +12,12 @@ export default defineConfig({
       '127.0.0.1',
       '0.0.0.0',
     ],
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5050',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 })
