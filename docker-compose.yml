@@ -24,6 +24,6 @@ services:
     volumes:
       - ./frontend/financial-manager-web:/app
     environment:
-      VITE_API_URL: http://localhost:5050/api
+      VITE_API_URL: https://financial.rafaeldevs.lat/api
     depends_on:
       - backend
