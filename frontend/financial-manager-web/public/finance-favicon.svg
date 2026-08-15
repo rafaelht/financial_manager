@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Financial Manager favicon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect x="22" y="24" width="84" height="80" rx="18" fill="#f8fafc" opacity="0.96"/>
+  <path d="M36 76h18l10-18 14 28 12-20h12" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44 88h52" stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+  <path d="M54 42h24" stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+  <path d="M77 42h12" stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="36" cy="76" r="6" fill="#10b981"/>
+  <circle cx="54" cy="58" r="6" fill="#10b981"/>
+  <circle cx="68" cy="86" r="6" fill="#10b981"/>
+  <circle cx="93" cy="66" r="6" fill="#10b981"/>
+</svg>

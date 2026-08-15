@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+frontend/financial-manager-web/dist/
+backend/**/bin/
+backend/**/obj/
+
+# Local environment files
+.env
+.env.*
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+dotnet-tools.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SQLite local database
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# IDE
+.vscode/
+.idea/
+
+# Test artifacts
+coverage/

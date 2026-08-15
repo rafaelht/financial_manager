@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: financial-manager-backend
+    ports:
+      - "5050:5050"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:5050
+    volumes:
+      - ./backend/FinancialManager.API/FinancialManager.db:/app/FinancialManager.db
+
+  frontend:
+    image: node:22-alpine
+    container_name: financial-manager-frontend
+    working_dir: /app
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/financial-manager-web:/app
+    environment:
+      VITE_API_URL: http://localhost:5050/api
+    depends_on:
+      - backend
