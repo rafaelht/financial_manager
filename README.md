@@ -35,7 +35,6 @@ Abre: http://localhost:5173
 backend/FinancialManager.API
 frontend/financial-manager-web
 README.md
-STARTUP.md
 Dockerfile
 docker-compose.yml
 ```
