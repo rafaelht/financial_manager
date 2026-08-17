@@ -55,6 +55,9 @@ export const TransactionForm = ({
   initialData,
   title = 'Nueva Transacción',
 }: TransactionFormProps) => {
+  const [amountText, setAmountText] = useState<string>(
+    initialData ? String(initialData.amount) : ''
+  );
   const [formData, setFormData] = useState<CreateTransactionDto>(
     initialData
       ? {
@@ -113,10 +116,21 @@ export const TransactionForm = ({
 
     if (!name) return;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: name === 'amount' ? parseAmountInput(String(value)) : value,
-    }));
+    if (name === 'amount') {
+      const stringValue = String(value);
+      setAmountText(stringValue);
+      
+      const parsed = parseAmountInput(stringValue);
+      setFormData((prev) => ({
+        ...prev,
+        amount: parsed,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
 
     if (errors[name]) {
       setErrors((prev) => ({
@@ -170,7 +184,7 @@ export const TransactionForm = ({
               name="amount"
               type="text"
               inputMode="decimal"
-              value={formData.amount === 0 ? '' : formData.amount}
+              value={amountText}
               onChange={handleChange}
               error={!!errors.amount}
               helperText={errors.amount}
